@@ -15,7 +15,8 @@
   },
   "dependencies": {
     "nuxt": "^2.0.0",
-    "uikit": "^3.0.0-rc.19"
+    "uikit": "^3.0.0-rc.19",
+    "vuex-dry": "^0.1.19"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",

@@ -14,6 +14,7 @@
 </template>
 
 <script>
+import { mapGetters } from "Vuex";
 import Avatar from "~/components/Avatar.vue";
 import NavMenuItem from "~/components/NavMenuItem.vue";
 import MenuItem from "~/components/MenuItem.vue";
@@ -27,38 +28,11 @@ export default {
   data: function() {
     return {
       expanded: false,
-      selectedMenu: "",
-      pages: [
-        { id: "posts", text: "Posts", link: "posts", icon: "folder" },
-        { id: "about", text: "About me", link: "about", icon: "user" }
-      ],
-      externalLinks: [
-        {
-          id: "github",
-          text: "Github",
-          link: "https://github.com/cmakara",
-          icon: "github"
-        },
-        {
-          id: "linkedin",
-          text: "LinkedIn",
-          link: "https://www.linkedin.com/in/csabamakara",
-          icon: "linkedin"
-        },
-        {
-          id: "mail",
-          text: "E-mail",
-          link: "mailto:csaba.makara@gmail.com",
-          icon: "mail"
-        },
-        {
-          id: "rss",
-          text: "Rss",
-          link: "https://cmakara.github.io/feed.xml",
-          icon: "rss"
-        }
-      ]
+      selectedMenu: ""
     };
+  },
+  computed: {
+    ...mapGetters("navigation", ["pages", "externalLinks"])
   },
   methods: {
     toggleExpand() {
