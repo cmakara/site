@@ -1,12 +1,24 @@
 <template>
-  <div>
-    <nuxt/>
+  <div class="base">
+    <SideBar />
+    <nuxt />
   </div>
 </template>
 
+<script>
+import SideBar from "~/components/SideBar.vue";
+
+export default {
+  components: {
+    SideBar
+  }
+};
+</script>
+
 <style>
 html {
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -16,7 +28,14 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+.base {
+  display: flex;
+  flex-direction: row;
+}
+
+*,
+*:before,
+*:after {
   box-sizing: border-box;
   margin: 0;
 }
