@@ -39,7 +39,6 @@ export default {
       this.expanded = !this.expanded;
     },
     isSelected(menu) {
-      console.log(this.selectedMenu === menu);
       return this.selectedMenu === menu;
     },
     selectMenu(menu) {
