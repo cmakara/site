@@ -5,7 +5,7 @@
   "author": "Csaba Makara <csaba.makara@gmail.com>",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "nuxt --port 3333",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
@@ -14,7 +14,8 @@
     "deploy": "push-dir --dir=dist --branch=gh-page --cleanup"
   },
   "dependencies": {
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "uikit": "^3.0.0-rc.19"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",

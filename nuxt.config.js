@@ -16,6 +16,8 @@ module.exports = {
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
   router: { base: "/site/" },
+  plugins: [{ src: "~/plugins/uikit.js", ssr: false }],
+  css: ["uikit/dist/css/uikit.css"],
   /*
   ** Customize the progress bar color
   */
